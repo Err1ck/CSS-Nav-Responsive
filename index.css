@@ -1,0 +1,110 @@
+:root{
+    --navbar-color:rgb(33, 36, 51);
+    --navbar-textcolor: grey;
+    --font-size:2rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+ul{
+    height: 6rem;
+    list-style-type: none;
+    font-size: var(--font-size);
+    gap: 1rem;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+select{
+    font-size: var(--font-size);
+    color: var(--navbar-textcolor);
+    background-color: var(--navbar-color);
+    border: none;
+}
+button{
+    border: 1px solid green;
+    color: green;
+    background-color: var(--navbar-color);
+    font-size: var(--font-size);
+    padding: 0 1rem;
+}
+button:hover{
+    background-color: green;
+    color: white;
+}
+/*--------------------------------------------*/
+.navbar{
+    background-color: var(--navbar-color);
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar__links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__links__1{
+    font-weight: bold;
+    padding: 0 2rem;
+}
+.navbar__links__3{
+    color: var(--navbar-textcolor);
+}
+.navbar__links__4{
+    color: var(--navbar-textcolor)
+}
+.navbar__search{
+    padding-right: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+    height: 3rem;
+}
+.navbar__search__srch{
+        
+    font-size: var(--font-size);
+    height: 100%;
+    padding: 1rem;
+}
+.navbar__search__button{
+    height: 100%;
+}
+.hamburguesa{
+    display: none;
+}
+/*
+Make responsive the exercise 'Nav': 
+    below 768 pixels the navbar is replaced by an hamburger menu without functionalities, it just appears. 
+    Try to create the hamburger menu both with CSS rules and using an icon.
+*/
+@media (max-width: 768px) {
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    .hamburguesa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        filter: invert(100%);
+    }
+    .navbar__links, .navbar__search {
+        display: none;
+    }
+} 
